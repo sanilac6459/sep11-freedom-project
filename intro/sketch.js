@@ -84,6 +84,6 @@
            // when user press key
               function keyPressed() {
                 if(keyCode == 32) { // when the user clicks their spacebar
-                  location.replace("https://sanilac6459.github.io/sep11-freedom-project-typing-game/main/index.html") // directs them to main page where they start the game
+                  location.replace("https://sanilac6459.github.io/sep11-freedom-project/main/index.html") // directs them to main page where they start the game
                 }
               }
