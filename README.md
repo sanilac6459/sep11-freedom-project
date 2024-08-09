@@ -1,12 +1,15 @@
-# SEP 11 Freedom Project: KeySanity Typing Game
+# Welcome to our typing game KeySanity!!! 💻
+Link to game: https://sanilac6459.github.io/sep11-freedom-project/intro/
 
-Hello! We present to you our project, Keysanity typing game. For this year's freedom project, we learned Javascript and our tool P5js to create this fun and interactive game for people to type quickly and efficiently.
+Creators: [Rajab Begim](https://github.com/Rajabb4685), [Vicky Chen](https://github.com/vickyc6811), and [Sanila Chowdhury](https://github.com/sanilac6459)
 
-Here’s how you play: there are directions in the intro on how to start. Once you click the start button, type exactly the displayed word and press enter or return to proceed. Our game will check and display the typed words based on the user's spelling.
+Tools: p5js and JavaScript
 
-You have 60 seconds to type as many words as you see on the screen. Have fun!! :)
+---------
+### How to play our game:
+* There are directions in the welcome page on how to start.
+* Once you click the start button, type exactly the displayed word and press enter or return to proceed.
+* You have 60 seconds to type as many words as you see on the screen.
+* Our game will check and display the typed words based on the user's spelling.
 
-Creators:
-* [Rajab Begim](https://github.com/Rajabb4685)
-* [Vicky Chen](https://github.com/vickyc6811)
-* [Sanila Chowdhury](https://github.com/sanilac6459)
+### HAVE FUN!!!
