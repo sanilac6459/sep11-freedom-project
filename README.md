@@ -8,6 +8,7 @@ Creators:
 * [Sanila Chowdhury](https://github.com/sanilac6459)
 
 ---------
+### Purpose:
 During our junior year of high school, we developed a game to enhance user’s typing skills. We used the p5.js library to design the interface and implemented JavaScript to generate random words, track scores, words per minute (WPM), typed words, and the timer.
 
 ### How to play our game:
