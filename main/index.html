@@ -170,7 +170,7 @@
         </main>
 
 
-        <script src = "./words.js" ></script>
+        <!-- <script src = "./words.js" ></script> -->
 
 
         <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
@@ -226,12 +226,10 @@
                     image(img, windowWidth-300, 125,200,200); // gold
 
                 }
-
                 // COMPONENTS IN OUR GAME
                 var startGameButton = document.getElementById("button"); // start button
                 var statsContent = document.getElementById("stats"); // number for wpm, score, and timer
                 var input = document.getElementById("input"); // textbox
-                var splittedWords = wordString.split(" "); // split the string of words to an ARRAY by every space
                 var textDisplay = document.getElementById("text-display"); // display words from generator
                 var form = document.getElementById("form"); // user input
                 var mainContent = document.getElementById("main-content"); // list of typed words
@@ -239,7 +237,6 @@
                 var scoreDisplay = document.getElementById("score-display"); // score
                 var wpmDisplay = document.getElementById("wpm-display"); // wpm
                 var refresh = document.getElementById("refresh"); // refresh button
-
 
                 // everything is set to 0 when user first enter our game
                 var state = {
@@ -252,14 +249,15 @@
 
 
                     // generate random words from the string of words
-                    function getRandomWord(){
-                        return splittedWords[Math.floor(Math.random() * splittedWords. length)]; // get random word from the splittedWords array
+                    async function getRandomWord(){
+                        var word = fetch("https://random-words-api.vercel.app/word").then(response => response.json()).then(data => {return data[0].word})
+                        return word
                     }
 
 
                     // show next random word
-                    function nextWord(){
-                        var word = getRandomWord(); // calling getRandomWord function
+                    async function nextWord(){
+                        var word = await getRandomWord(); // calling getRandomWord function
                         textDisplay.textContent = word; // set text to word from random generator
                         state.currentWord = word; // set current word to the random word being displayed
                     }
@@ -338,10 +336,11 @@
 
 
                 // WHEN USER PRESSED ENTER/RETURN TO SUBMITS INPUT
-                form.addEventListener("submit", function(event){
+                form.addEventListener("keyup", function(event){
                     event.preventDefault(); // prevent just in case it triggers glitch or any default behavior on browser
 
                     // when the user enter a input
+                    if(event.code == "Space") {
                         var userInput = input.value; // user input is stored for checking spelling
 
                         // if user didnt enter a input, do nothing
@@ -377,7 +376,7 @@
                     // show the next word and update wpm, score, and timer
                     nextWord(); // call nextWord function
                     showStats(); // calling showStats function
-                });
+                }});
 
         </script>
     </body>
